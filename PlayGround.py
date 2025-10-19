@@ -16,8 +16,15 @@ def delete_contact(): #function to delete a contact
     place_holder = "This is a place holder"
 
 def viewing_contacts(): #Function that will return the current contact list
-    for key, value in phone_book.items():
-        print(f'{key}: {value}')
+    if not phone_book:
+        print("🦗It's pretty empty here!\n")
+        return
+    print("\nYour current contacts")
+    print("------------------------")
+    for i, contact in enumerate(phone_book, start=1):
+        print(f"\nContact #{i}")
+        for key, value in contact.items():
+            print(f"{key:<13}: {value}")
 
 #Phone book. Utilizing dictionaries - Note, this was originally a dict, I realized I needed a list that I could append to
 phone_book = []
