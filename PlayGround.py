@@ -1,9 +1,13 @@
 #functions that will perform the chosen action - add, update, or delete
 def add_contact(): #funciton actions to add new contact
-    phone_book["First Name"] = input("First Name: ")
-    phone_book["Last Name"] = input("Last Name: ")
-    phone_book["Phone Number"] = input("Phone Number: ")
-    phone_book["Email"] = input("Email: ")
+    contact = {
+        "First Name": input("First Name: "),
+        "Last Name": input("Last Name: "),
+        "Phone Number": input("Phone Number: "),
+        "Email": input("Email: ")
+    }
+    phone_book.append(contact)
+    print("Contact added successfully!\n")
 
 def update_contact(): #function to update contact
     update_place_holder = "This is a place holder"
@@ -20,6 +24,19 @@ phone_book = []
 
 print("   Your Phone Book   ")
 print("---------------------")
-
+next_action_choice = 0
 #An option menu, what to do next
-next_action_choice = input("1: Add new contact\n2: Update contact\n3: Delete contact\n4: View contacts\n5: Exit\n\nChoice: ")
+while next_action_choice != 5:
+    next_action_choice = int(input("1: Add new contact\n2: Update contact\n3: Delete contact\n4: View contacts\n5: Exit\n\nChoice: "))
+    if next_action_choice == 1:
+        add_contact()
+    elif next_action_choice == 2:
+        update_contact()
+    elif next_action_choice == 3:
+        delete_contact()
+    elif next_action_choice == 4:
+        viewing_contacts()
+    elif next_action_choice == 5:
+        print("Good Bye!👋🏼")
+    else:
+        print("You'll need to make a selection")
