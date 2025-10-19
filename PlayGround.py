@@ -15,13 +15,8 @@ def viewing_contacts(): #Function that will return the current contact list
     for key, value in phone_book.items():
         print(f'{key}: {value}')
 
-#Phone book. Utilizing dictionaries
-phone_book = {
-    "First Name": " ",
-    "Last Name": " ",
-    "Phone Number": " ",
-    "Email": " "
-}
+#Phone book. Utilizing dictionaries - Note, this was originally a dict, I realized I needed a list that I could append to
+phone_book = []
 
 print("   Your Phone Book   ")
 print("---------------------")
