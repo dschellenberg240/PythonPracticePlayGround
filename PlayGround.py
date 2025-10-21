@@ -1,4 +1,47 @@
-#functions that will perform the chosen action - add, update, or delete
+"""
+Python projects ideas - Dice roll with a gambling aspect to it. Bet x amount on what you think the number will be.
+"""
+
+"""
+----> Start: Pizza Order project
+
+print("Welcome to PPP! Python Pizza Deliveries")
+size = input("What size pizza do you want? S, M or L: ").upper()
+pepperoni = input("Do you wan pepperoni on you pizza? Y or N: ").upper()
+extra_cheese = input("Do you want extra cheese? Y or N: ").upper()
+
+bill = 0
+if size == "S":
+    bill += 15
+elif size == "M":
+    bill += 20
+elif size == "L":
+    bill += 25
+else:
+    print("Input not recognized.")
+
+if pepperoni == "Y":
+    if size == "S":
+        bill += 2
+    else:
+        bill += 3
+
+if extra_cheese == "Y":
+    bill += 1
+
+print(f"Your final bill is: ${bill}.")
+
+
+----> End: Pizza order project
+"""
+
+
+"""
+----> Start: phone book project.
+>I was able to practice functions, if statement, loops, working with lists, and data types.
+>I still need to complete the update_contact() function and the delete_contact()
+
+#functions that will perform the chosen action - add, view, update, or delete
 def add_contact(): #funciton actions to add new contact
     contact = {
         "First Name": input("First Name: "),
@@ -26,7 +69,8 @@ def viewing_contacts(): #Function that will return the current contact list
         for key, value in contact.items():
             print(f"{key:<13}: {value}")
 
-#Phone book. Utilizing dictionaries - Note, this was originally a dict, I realized I needed a list that I could append to
+#Phone book. Utilizing dictionaries - Note, this was originally a dic,
+#I realized I needed a list that I could append to, so I updated it to start as an empty list.
 phone_book = []
 
 print("   Your Phone Book   ")
@@ -47,3 +91,7 @@ while next_action_choice != 5:
         print("Good Bye!👋🏼")
     else:
         print("You'll need to make a selection")
+
+
+-----> End: Phone book project
+"""
